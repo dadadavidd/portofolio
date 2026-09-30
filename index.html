@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Portofolio | David</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Devicon untuk logo bahasa pemrograman -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- ================= NAVBAR ================= -->
+    <nav>
+      <a href="#home" class="logo">
+        <span class="gradient-text">dadadavid</span>
+      </a>
+
+      <ul class="links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <!-- Tombol menu mobile -->
+      <button
+        type="button"
+        class="menu-btn"
+        id="menuBtn"
+        aria-label="Buka menu"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <a href="#contact" class="btn nav-btn">Kontak Saya</a>
+    </nav>
+
+    <!-- ================= HOME ================= -->
+    <section id="home">
+      <div class="home-content">
+        <img class="profile-image" src="image/david.jpeg" alt="Foto David" />
+
+        <div class="info-box">
+          <h1>
+            Halo, saya
+            <span class="gradient-text">David</span>
+          </h1>
+
+          <h3>
+            <span class="gradient-text">Junior Web Developer</span>
+            <br />
+            masih belajar dan terus berkembang
+          </h3>
+
+          <p>
+            Saya sedang mengembangkan kemampuan di bidang web development,
+            desain, dan teknologi. Saya mempelajari berbagai hal baru dan
+            mencoba membuat berbagai project.
+          </p>
+        </div>
+
+        <div class="btn-box">
+          <a href="#services" class="btn">Lihat Services</a>
+          <a href="#contact" class="btn btn-filled">Hubungi Saya</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about">
+      <div class="about-wrapper">
+        <div class="about-box">
+          <div class="about-info">
+            <h1>
+              <span class="gradient-text">Tentang Saya</span>
+            </h1>
+
+            <p>
+              Saya adalah seorang pelajar yang tertarik dengan ngoding,
+              khususnya web development, pemrograman, desain grafis, dan
+              pengelolaan server Minecraft.
+            </p>
+          </div>
+
+          <h2>
+            <span class="gradient-text">Skills</span>
+          </h2>
+
+          <div class="skills">
+            <ul>
+              <li>
+                <i class="devicon-html5-plain" aria-hidden="true"></i>
+                <span>HTML</span>
+              </li>
+
+              <li>
+                <i class="devicon-css3-plain" aria-hidden="true"></i>
+                <span>CSS</span>
+              </li>
+
+              <li>
+                <i class="devicon-cplusplus-plain" aria-hidden="true"></i>
+                <span>C++</span>
+              </li>
+            </ul>
+
+            <ul>
+              <li>
+                <i class="devicon-javascript-plain" aria-hidden="true"></i>
+                <span>JavaScript</span>
+              </li>
+
+              <li>
+                <i class="devicon-c-plain" aria-hidden="true"></i>
+                <span>C</span>
+              </li>
+
+              <li>
+                <i class="devicon-networkx-plain" aria-hidden="true"></i>
+                <span>Minecraft Server Management</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ================= GALLERY ================= -->
+        <div class="gallery">
+          <div class="gallery-image">
+            <img id="galleryImg" src="image/gallery1.png" alt="Galeri foto 1" />
+          </div>
+
+          <div class="gallery-controls">
+            <span id="galleryCounter">1 / 3</span>
+
+            <button id="nextBtn" type="button">
+              Next <span aria-hidden="true">→</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SERVICES ================= -->
+    <section id="services">
+      <h1 class="header">
+        <span class="gradient-text">Services</span>
+      </h1>
+
+      <div class="service-container">
+        <article class="box">
+          <h2>
+            <span class="gradient-text">Web Design</span>
+          </h2>
+
+          <p>
+            Membuat tampilan website yang modern, rapi, dan responsif untuk
+            berbagai ukuran layar.
+          </p>
+
+          <img src="image/gallery1.png" alt="Contoh Web Design" />
+        </article>
+
+        <article class="box">
+          <h2>
+            <span class="gradient-text">Web Developer</span>
+          </h2>
+
+          <p>
+            Mengembangkan website menggunakan HTML, CSS, JavaScript, dan
+            teknologi web lainnya.
+          </p>
+
+          <img src="image/webdev.png" alt="Contoh Web Development" />
+        </article>
+
+        <article class="box">
+          <h2>
+            <span class="gradient-text">Graphic Design</span>
+          </h2>
+
+          <p>
+            Membuat berbagai desain visual untuk kebutuhan digital seperti
+            poster, konten, dan project lainnya.
+          </p>
+
+          <img src="image/graphicdes.png" alt="Contoh Graphic Design" />
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact">
+      <h1 class="header">
+        <span class="gradient-text">Contact</span>
+      </h1>
+
+      <form id="contactForm">
+        <div class="input-box">
+          <label for="name">Nama</label>
+          <input id="name" type="text" placeholder="Isi nama kamu" required />
+        </div>
+
+        <div class="input-box">
+          <label for="phone">Nomor Telepon</label>
+          <input id="phone" type="tel" placeholder="Isi nomor kamu" required />
+        </div>
+
+        <div class="input-box">
+          <label for="purpose">Tujuan Menghubungi</label>
+          <textarea
+            id="purpose"
+            placeholder="Contoh: ingin membuat website..."
+            rows="5"
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-submit">Kirim Pesan</button>
+      </form>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+      <div class="col-left">
+        <div class="col-box">
+          <div class="footer-icon" aria-hidden="true">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 21s7-6.1 7-12A7 7 0 1 0 5 9c0 5.9 7 12 7 12Z"
+                stroke="currentColor"
+                stroke-width="1.8"
+              />
+              <circle
+                cx="12"
+                cy="9"
+                r="2.5"
+                stroke="currentColor"
+                stroke-width="1.8"
+              />
+            </svg>
+          </div>
+
+          <p>Indonesia, Kalimantan Barat, Pontianak</p>
+        </div>
+
+        <div class="col-box">
+          <div class="footer-icon" aria-hidden="true">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                x="4"
+                y="4"
+                width="16"
+                height="16"
+                rx="5"
+                stroke="currentColor"
+                stroke-width="1.8"
+              />
+              <circle
+                cx="12"
+                cy="12"
+                r="4"
+                stroke="currentColor"
+                stroke-width="1.8"
+              />
+              <circle cx="17.2" cy="6.8" r="1" fill="currentColor" />
+            </svg>
+          </div>
+
+          <p>Instagram: [ddadavid_]</p>
+        </div>
+
+        <div class="col-box">
+          <div class="footer-icon" aria-hidden="true">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                x="3"
+                y="5"
+                width="18"
+                height="14"
+                rx="2"
+                stroke="currentColor"
+                stroke-width="1.8"
+              />
+              <path d="M3 9h18" stroke="currentColor" stroke-width="1.8" />
+            </svg>
+          </div>
+
+          <p>Minecraft Server CrossPlay: [ egeria..arqonara.com:25526 ]</p>
+        </div>
+      </div>
+
+      <div class="col-right">
+        <h3>
+          <span class="gradient-text">About My Services</span>
+        </h3>
+
+        <p>
+          Saya dapat membantu anda dalam berbagai layanan yang berhubungan
+          dengan website, desain grafis, dan teknologi. Setiap project
+          dikerjakan dengan detail, desain modern, fungsional, dan efisien.
+        </p>
+
+        <div class="social-icons">
+          <a
+            href="https://www.instagram.com/ddadavid_?stkn=MXF2Mjg2YjluczE0bg=="
+            aria-label="Instagram"
+            >Instagram</a
+          >
+          <p>|</p>
+          <a
+            href="https://www.tiktok.com/@dadadavid123?_r=1&_t=ZS-9AAPqTeXbL6"
+            aria-label="TikTok"
+            >TikTok</a
+          >
+          <p>|</p>
+          <a href="#" aria-label="Twitter">Twitter</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
