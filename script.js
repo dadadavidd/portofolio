@@ -109,3 +109,98 @@ if (contactForm) {
     contactForm.reset();
   });
 }
+
+
+/* ================= CODING JOURNEY ================= */
+
+const journeySection = document.getElementById("journey");
+const journeyItems = document.querySelectorAll(".journey-item");
+const journeyProgress = document.querySelector(".journey-line-progress");
+
+if (journeySection && journeyItems.length && journeyProgress) {
+  const reducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  /* ================= REVEAL STORY ================= */
+
+  if (reducedMotion) {
+    journeyItems.forEach((item) => {
+      item.classList.add("is-visible");
+    });
+  } else {
+    const journeyObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            return;
+          }
+
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        });
+      },
+      {
+        threshold: 0.25,
+        rootMargin: "0px 0px -8% 0px"
+      }
+    );
+
+    journeyItems.forEach((item) => {
+      journeyObserver.observe(item);
+    });
+  }
+
+  /* ================= LINE PROGRESS ================= */
+
+  let progressTicking = false;
+
+  const updateJourneyProgress = () => {
+    const rect = journeySection.getBoundingClientRect();
+
+    /*
+      Titik acuan berada sedikit di bawah tengah layar.
+      Saat titik ini bergerak melewati section,
+      garis utama akan ikut terisi.
+    */
+    const triggerPoint = window.innerHeight * 0.55;
+
+    const totalHeight = rect.height;
+
+    if (totalHeight <= 0) {
+      journeyProgress.style.height = "0%";
+      return;
+    }
+
+    let progress = (triggerPoint - rect.top) / totalHeight;
+
+    progress = Math.max(0, Math.min(progress, 1));
+
+    journeyProgress.style.height = `${progress * 100}%`;
+
+    progressTicking = false;
+  };
+
+  const requestJourneyProgressUpdate = () => {
+    if (progressTicking) {
+      return;
+    }
+
+    progressTicking = true;
+
+    window.requestAnimationFrame(updateJourneyProgress);
+  };
+
+  window.addEventListener(
+    "scroll",
+    requestJourneyProgressUpdate,
+    { passive: true }
+  );
+
+  window.addEventListener(
+    "resize",
+    requestJourneyProgressUpdate
+  );
+
+  updateJourneyProgress();
+}
