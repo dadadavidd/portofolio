@@ -3,647 +3,343 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Portofolio | David</title>
-
-    <link rel="stylesheet" href="./style.css" />
-
-    <!-- Google Font -->
+    <meta
+      name="description"
+      content="Portofolio David, pelajar yang belajar web development, desain, dan teknologi."
+    />
+    <title>David | Portofolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Devicon untuk logo bahasa pemrograman -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
     />
+    <link rel="stylesheet" href="./style.css" />
   </head>
-
   <body>
-    <!-- ================= NAVBAR ================= -->
-    <nav>
-      <a href="#home" class="logo">
-        <span class="gradient-text">dadadavid</span>
-      </a>
-
-      <ul class="links" id="navLinks">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#journey">Journey</a></li>
-      </ul>
-
-      <!-- Tombol menu mobile -->
-      <button
-        type="button"
-        class="menu-btn"
-        id="menuBtn"
-        aria-label="Buka menu"
-        aria-expanded="false"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      <a href="#contact" class="btn nav-btn">Kontak Saya</a>
-    </nav>
-
-    <!-- ================= HOME ================= -->
-    <section id="home">
-      <div class="home-content">
-        <img class="profile-image" src="image/david.jpeg" alt="Foto David" />
-
-        <div class="info-box">
-          <h1>
-            Halo, saya
-            <span class="gradient-text">David</span>
+    <a class="skip-link" href="#content">Lewati navigasi</a>
+    <header class="site-header">
+      <nav class="nav" aria-label="Navigasi utama">
+        <a href="#home" class="logo"
+          ><span class="gradient-text">dadadavid</span></a
+        >
+        <button
+          class="menu-btn"
+          id="menuBtn"
+          type="button"
+          aria-expanded="false"
+          aria-controls="navLinks"
+          aria-label="Buka menu"
+        >
+          <span></span><span></span><span></span
+          ><span class="menu-label">Menu</span>
+        </button>
+        <ul class="links" id="navLinks">
+          <li><a href="#home">Beranda</a></li>
+          <li><a href="#about">Tentang</a></li>
+          <li><a href="#journey">Perjalanan</a></li>
+          <li><a href="#services">Fokus</a></li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+        <a href="#contact" class="nav-contact">Hubungi saya</a>
+      </nav>
+    </header>
+    <main id="content">
+      <section class="hero section" id="home" aria-labelledby="hero-title">
+        <div class="hero-chrome reveal" aria-hidden="true">
+          <span class="window-light window-light-red"></span>
+          <span class="window-light window-light-yellow"></span>
+          <span class="window-light window-light-green"></span>
+          <span class="hero-chrome-line"></span>
+        </div>
+        <figure class="portrait reveal" aria-label="Foto David">
+          <img src="image/david.jpeg" alt="David" />
+        </figure>
+        <div class="hero-copy reveal">
+          <h1 id="hero-title">
+            Halo, saya <span class="gradient-text">David</span>
           </h1>
-
-          <h3>
-            <span class="gradient-text">Junior Web Developer</span>
-            <br />
-            masih belajar dan terus berkembang
-          </h3>
-
-          <p>
+          <p class="hero-role">
+            <span class="gradient-text">Junior Web Developer</span><br />
+            Masih belajar dan terus berkembang.
+          </p>
+          <p class="lede">
             Saya sedang mengembangkan kemampuan di bidang web development,
             desain, dan teknologi. Saya mempelajari berbagai hal baru dan
             mencoba membuat berbagai project.
           </p>
-        </div>
-
-        <div class="btn-box">
-          <a href="#services" class="btn">Lihat Services</a>
-          <a href="#contact" class="btn btn-filled">Hubungi Saya</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= ABOUT ================= -->
-    <section id="about">
-      <div class="about-wrapper">
-        <div class="about-box">
-          <div class="about-info">
-            <h1>
-              <span class="gradient-text">Tentang Saya</span>
-            </h1>
-
-            <p>
-              Saya adalah seorang pelajar yang tertarik dengan ngoding,
-              khususnya web development, pemrograman, desain grafis, dan
-              pengelolaan server Minecraft.
-            </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#services"
+              >Lihat fokus saya</a
+            >
+            <a class="text-link" href="#contact"
+              >Hubungi saya <span aria-hidden="true">↗</span></a
+            >
           </div>
-
-          <h2>
-            <span class="gradient-text">Skills</span>
+        </div>
+      </section>
+      <section
+        class="about section section-surface"
+        id="about"
+        aria-labelledby="about-title"
+      >
+        <div class="section-intro reveal">
+          <p class="kicker">Tentang saya</p>
+          <h2 id="about-title">
+            <span class="gradient-text">Penasaran</span> adalah awal segalanya.
           </h2>
-
-          <div class="skills">
-            <ul>
+          <p>
+            Saya seorang pelajar yang tertarik pada pemrograman web, desain
+            grafis, dan pengelolaan server Minecraft. Saya suka memahami
+            bagaimana sesuatu bekerja, lalu membuatnya lebih mudah digunakan.
+          </p>
+        </div>
+        <div class="about-layout">
+          <div class="skills-panel reveal">
+            <h3>Kemampuan Yang Saya Kembangkan</h3>
+            <ul class="skills-list">
               <li>
-                <i class="devicon-html5-plain" aria-hidden="true"></i>
-                <span>HTML</span>
+                <i class="devicon-html5-plain" aria-hidden="true"></i
+                ><span>HTML</span>
               </li>
-
               <li>
-                <i class="devicon-css3-plain" aria-hidden="true"></i>
-                <span>CSS</span>
+                <i class="devicon-css3-plain" aria-hidden="true"></i
+                ><span>CSS</span>
               </li>
-
               <li>
-                <i class="devicon-cplusplus-plain" aria-hidden="true"></i>
-                <span>C++</span>
+                <i class="devicon-javascript-plain" aria-hidden="true"></i
+                ><span>JavaScript</span>
+              </li>
+              <li>
+                <i class="devicon-cplusplus-plain" aria-hidden="true"></i
+                ><span>C++</span>
+              </li>
+              <li>
+                <i class="devicon-c-plain" aria-hidden="true"></i><span>C</span>
+              </li>
+              <li>
+                <i class="devicon-networkx-plain" aria-hidden="true"></i
+                ><span>Manajemen server Minecraft</span>
               </li>
             </ul>
-
-            <ul>
-              <li>
-                <i class="devicon-javascript-plain" aria-hidden="true"></i>
-                <span>JavaScript</span>
-              </li>
-
-              <li>
-                <i class="devicon-c-plain" aria-hidden="true"></i>
-                <span>C</span>
-              </li>
-
-              <li>
-                <i class="devicon-networkx-plain" aria-hidden="true"></i>
-                <span>Minecraft Server Management</span>
-              </li>
-            </ul>
           </div>
-        </div>
-
-        <!-- ================= GALLERY ================= -->
-        <div class="gallery">
-          <div class="gallery-image">
-            <img id="galleryImg" src="image/gallery1.png" alt="Galeri foto 1" />
-          </div>
-
-          <div class="gallery-controls">
-            <span id="galleryCounter">1 / 3</span>
-
-            <button id="nextBtn" type="button">
-              Next <span aria-hidden="true">→</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= CODING JOURNEY ================= -->
-<section id="journey">
-  <div class="journey-header">
-    <span class="journey-eyebrow">David's Learning Journey</span>
-
-    <h1>
-      <span class="gradient-text">Perjalanan Kode Pertama</span>
-    </h1>
-
-    <p>
-      Diawali sejak tk dengan keingintahuan akan cara komputer bekerja, kode pertama saya adalah <span class="highlight">print('hello jagad')</span>. Ngoding itu adalah hal yang gampang jika kamu ingin mempelajarinya.
-    </p>
-  </div>
-
-  <div class="journey-container">
-    <!-- Garis utama -->
-    <div class="journey-line" aria-hidden="true">
-      <div class="journey-line-progress"></div>
-    </div>
-
-    <!-- ================= STORY 01 ================= -->
-    <article class="journey-item">
-      <div class="journey-card">
-        <div class="journey-card-top">
-          <span class="journey-number">01</span>
-          <span class="journey-label">THE BEGINNING</span>
-        </div>
-
-        <h2>Penasaran? </h2>
-
-        <p>
-          Dulu pas gua masih kecil, kira kira saat itu 5 tahun, gua mencoba untuk
-          menghidupkan komputer sendiri. Gua asal pencet keyboard, semua tombol gua pencet
-          dan hasilnya komputernya malah bluescreen.
-        </p>
-      </div>
-
-      <div class="journey-marker">
-        <span></span>
-      </div>
-
-      <div class="journey-visual journey-terminal" aria-hidden="true">
-        <div class="visual-top">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-
-        <div class="terminal-content">
-          <span class="terminal-line small"></span>
-          <span class="terminal-line medium"></span>
-          <span class="terminal-line long"></span>
-
-          <span class="terminal-cursor"></span>
-        </div>
-
-        <div class="visual-caption">
-          <strong>Kode Pertama</strong>
-          <span>keinginan dan kode</span>
-        </div>
-      </div>
-    </article>
-
-    <!-- ================= STORY 02 ================= -->
-    <article class="journey-item">
-      <div class="journey-visual journey-code" aria-hidden="true">
-        <div class="code-window-top">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-
-        <div class="code-content">
-          <div class="code-line line-a">
-            </i>nama = "David"</i>
-          </div>
-
-          <div class="code-line line-b">
-            </i>print("Halo")</i>
-          </div>
-
-          <div class="code-line line-c">
-            </i>print(nama)</i>
-          </div>
-
-          <div class="code-line line-d">
-            </i>print("Halo, jagad")</i>
-          </div>
-        </div>
-
-        <div class="visual-caption">
-          <strong>Kode Pertama</strong>
-          <span>Python</span>
-        </div>
-      </div>
-
-      <div class="journey-marker">
-        <span></span>
-      </div>
-
-      <div class="journey-card">
-        <div class="journey-card-top">
-          <span class="journey-number">02</span>
-          <span class="journey-label">Kode Pertama</span>
-        </div>
-
-        <h2>Mulai Belajar Ototidak</h2>
-
-        <p>
-          Pertama kali gua belajar ngoding adalah pas gua kelas 8. Bahasa pertama yang
-          gua sentuh adalah Python, beberapa bulan kemudian gua juga belajar buat bikin website
-          pake HTML, CSS, dan JS. Gua inget saat itu belajar dari channel Youtube Dea Afrizal.
-        </p>
-      </div>
-    </article>
-
-    <!-- ================= STORY 03 ================= -->
-    <article class="journey-item">
-      <div class="journey-card">
-        <div class="journey-card-top">
-          <span class="journey-number">03</span>
-          <span class="journey-label">Ketertarikan</span>
-        </div>
-
-        <h2>Itu menarik? </h2>
-
-        <p>
-          Selain belajar ngoding gua juga mendalami berbagai hal di bidang komputer seperti
-           Desain Grafis, dan Visual Jockey. Gua belajar banyak software seperti Easy worship 7, Resolume Arena 7, Adobe After Effect,
-           Propresenter.
-        </p>
-      </div>
-
-      <div class="journey-marker">
-        <span></span>
-      </div>
-
-      <div class="journey-visual journey-browser" aria-hidden="true">
-        <div class="browser-top">
-          <span class="browser-dot"></span>
-          <span class="browser-dot"></span>
-          <span class="browser-dot"></span>
-          <div class="browser-address"></div>
-        </div>
-
-        <div class="browser-body">
-          <div class="browser-sidebar"></div>
-
-          <div class="browser-main">
-            <span></span>
-            <span></span>
-            <div class="browser-card-row">
-              <i></i>
-              <i></i>
-              <i></i>
+          <div class="gallery reveal" aria-label="Galeri karya dan aktivitas">
+            <div class="gallery-image">
+              <img
+                id="galleryImg"
+                src="image/gallery1.png"
+                alt="Galeri foto 1"
+              />
+            </div>
+            <div class="gallery-controls">
+              <p id="galleryCounter" aria-live="polite">Foto 1 dari 3</p>
+              <div class="gallery-buttons">
+                <button id="previousBtn" type="button">Sebelumnya</button
+                ><button id="nextBtn" type="button">Berikutnya</button>
+              </div>
             </div>
           </div>
         </div>
-
-        <div class="visual-caption">
-          <strong>BUILDING THE WORLD</strong>
-          <span>game dan media sosial</span>
-        </div>
-      </div>
-    </article>
-
-    <!-- ================= STORY 04 ================= -->
-    <article class="journey-item">
-      <div class="journey-visual journey-minecraft" aria-hidden="true">
-        <div class="mc-grid">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-
-        <div class="mc-center">
-          <strong>MINECRAFT</strong>
-          <small>SERVER</small>
-        </div>
-
-        <div class="visual-caption">
-          <strong>Bangun Duniamu.</strong>
-          <span>economy • marketing</span>
-        </div>
-      </div>
-
-      <div class="journey-marker">
-        <span></span>
-      </div>
-
-      <div class="journey-card">
-        <div class="journey-card-top">
-          <span class="journey-number">04</span>
-          <span class="journey-label">MINECRAFT</span>
-        </div>
-
-        <h2>Hobi gua adalah main game?</h2>
-
-        <p>
-          Gatau sejak kapan gua malah tiba tiba suka main game minecraft, lalu gua bangun
-          sebuah private server dengan teman gua. Dan demikianlah masih berlanjut hari ini menjadi sebuah
-          public server yang gua sebut sebagai Egeria Network.
-        </p>
-      </div>
-    </article>
-
-    <!-- ================= STORY 05 ================= -->
-    <article class="journey-item">
-      <div class="journey-card">
-        <div class="journey-card-top">
-          <span class="journey-number">05</span>
-          <span class="journey-label">CREATIVE SIDE</span>
-        </div>
-
-        <h2>Eksplorasi Hidup</h2>
-
-        <p>
-          Banyak hal yang udah gua coba, ga banyak yang menarik, diantaranya ada masak,
-          bahasa inggris, bahasa mandarin, seni, musik, ilmu sosial, dan lain lain. Tapi 
-          gua ga puas sama sekali dengan itu, yang gua mau adalah ngetik doang.
-        </p>
-      </div>
-
-      <div class="journey-marker">
-        <span></span>
-      </div>
-
-      <div class="journey-visual journey-design" aria-hidden="true">
-        <div class="design-canvas">
-          <div class="design-circle"></div>
-          <div class="design-square"></div>
-          <div class="design-line"></div>
-
-          <span class="design-tag tag-one">DESIGN</span>
-          <span class="design-tag tag-two">EDIT</span>
-          <span class="design-tag tag-three">CREATE</span>
-        </div>
-
-        <div class="visual-caption">
-          <strong>CREATIVE</strong>
-          <strong> MODE</strong>
-          <span>Bangun kotamu</span>
-        </div>
-      </div>
-    </article>
-
-    <!-- ================= STORY 06 ================= -->
-    <article class="journey-item journey-finish">
-      <div class="journey-visual journey-now" aria-hidden="true">
-        <div class="now-core">
-          <span class="now-ring ring-one"></span>
-          <span class="now-ring ring-two"></span>
-          <div class="now-center">
-            <span>&gt;_</span>
-          </div>
-        </div>
-
-        <div class="visual-caption">
-          <strong>CURRENTLY BUILDING</strong>
-          <span>nasi menjadi bubur, tetap saya makan</span>
-        </div>
-      </div>
-
-      <div class="journey-marker">
-        <span></span>
-      </div>
-
-      <div class="journey-card">
-        <div class="journey-card-top">
-          <span class="journey-number">06</span>
-          <span class="journey-label">HARI INI</span>
-        </div>
-
-        <h2>Hidup mungkin masih panjang</h2>
-
-        <p>
-         Umur gua aja baru 15 tahun, mungkin aja gua bakal nemu jalan baru dan panggilan baru.
-         Siapa tau gua pengen main catur sampai dapat gelar master, atau buat apps / website.
-        </p>
-
-        <div class="journey-end">
-          <span class="journey-end-line"></span>
-          <span>Coming Soon.</span>
-        </div>
-      </div>
-    </article>
-  </div>
-</section>
-
-    <!-- ================= SERVICES ================= -->
-    <section id="services">
-      <h1 class="header">
-        <span class="gradient-text">Services</span>
-      </h1>
-
-      <div class="service-container">
-        <article class="box">
-          <h2>
-            <span class="gradient-text">Web Design</span>
+      </section>
+      <section
+        class="journey section"
+        id="journey"
+        aria-labelledby="journey-title"
+      >
+        <div class="journey-heading reveal">
+          <p class="kicker">Perjalanan belajar</p>
+          <h2 id="journey-title">
+            Satu rasa penasaran,
+            <span class="gradient-text"> satu tujuan</span>
           </h2>
-
           <p>
-            Membuat tampilan website yang modern, rapi, dan responsif untuk
-            berbagai ukuran layar.
+            Perjalanan ini dimulai dari rasa ingin tahu terhadap komputer, lalu
+            berlanjut ke kode, desain, dan dunia komunitas.
           </p>
-
-          <img src="image/gallery1.png" alt="Contoh Web Design" />
-        </article>
-
-        <article class="box">
-          <h2>
-            <span class="gradient-text">Web Developer</span>
+        </div>
+        <ol class="timeline">
+          <li class="timeline-item reveal">
+            <span class="timeline-index">01</span>
+            <div>
+              <p class="timeline-label">Awalnya</p>
+              <h3>Gas aja dulu, error tinggal fix</h3>
+              <p>
+                pas kecil, saya pernah mencoba menyalakan komputer sendiri dan
+                menekan banyak tombol sampai komputer mengalami blue screen.
+                Dari situ saya mulai penasaran pada cara komputer bekerja.
+              </p>
+            </div>
+          </li>
+          <li class="timeline-item reveal">
+            <span class="timeline-index">02</span>
+            <div>
+              <p class="timeline-label">Kode pertama</p>
+              <h3>Belajar secara ototidak</h3>
+              <p>
+                Saya mulai belajar pemrograman saat kelas 8. Python adalah
+                bahasa pertama yang saya coba, lalu saya belajar HTML, CSS, dan
+                JavaScript dari berbagai materi yang tersedia.
+              </p>
+            </div>
+          </li>
+          <li class="timeline-item reveal">
+            <span class="timeline-index">03</span>
+            <div>
+              <p class="timeline-label">Sisi visual</p>
+              <h3>Visual juga bagian dari teknologi</h3>
+              <p>
+                Selain coding, saya mempelajari desain grafis dan visual jockey.
+                Saya mengeksplorasi EasyWorship, Resolume Arena, Adobe After
+                Effects, serta ProPresenter.
+              </p>
+            </div>
+          </li>
+          <li class="timeline-item reveal">
+            <span class="timeline-index">04</span>
+            <div>
+              <p class="timeline-label">Komunitas</p>
+              <h3>Merintis Egeria Network</h3>
+              <p>
+                Ketertarikan saya pada Minecraft berkembang menjadi pengalaman
+                membangun public server bersama teman. Server itu kemudian
+                tumbuh menjadi Egeria Network.
+              </p>
+            </div>
+          </li>
+          <li class="timeline-item reveal">
+            <span class="timeline-index">05</span>
+            <div>
+              <p class="timeline-label">Hari ini</p>
+              <h3>Masih terbuka untuk arah berikutnya</h3>
+              <p>
+                Saya masih belajar, mencoba, dan mencari bidang yang paling
+                ingin saya tekuni. Untuk sekarang, saya ingin terus membuat
+                aplikasi dan website yang lebih baik.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </section>
+      <section
+        class="services section section-surface"
+        id="services"
+        aria-labelledby="services-title"
+      >
+        <div class="section-intro reveal">
+          <p class="kicker">Fokus yang saya kembangkan</p>
+          <h2 id="services-title">
+            Tiga bidang yang
+            <span class="gradient-text">saling melengkapi.</span>
           </h2>
-
-          <p>
-            Mengembangkan website menggunakan HTML, CSS, JavaScript, dan
-            teknologi web lainnya.
-          </p>
-
-          <img src="image/webdev.png" alt="Contoh Web Development" />
-        </article>
-
-        <article class="box">
-          <h2>
-            <span class="gradient-text">Graphic Design</span>
+        </div>
+        <div class="service-list">
+          <article class="service-card reveal">
+            <img src="image/gallery1.png" alt="Contoh tampilan web" />
+            <div>
+              <p class="service-number">01</p>
+              <h3>Desain web</h3>
+              <p>
+                Membuat tampilan website yang rapi, mudah dibaca, dan nyaman
+                digunakan di berbagai layar.
+              </p>
+            </div>
+          </article>
+          <article class="service-card reveal">
+            <img src="image/webdev.png" alt="Contoh pengembangan web" />
+            <div>
+              <p class="service-number">02</p>
+              <h3>Pengembangan web</h3>
+              <p>
+                Mengembangkan website dengan HTML, CSS, JavaScript, dan
+                teknologi web yang terus saya pelajari.
+              </p>
+            </div>
+          </article>
+          <article class="service-card reveal">
+            <img src="image/graphicdes.png" alt="Contoh desain grafis" />
+            <div>
+              <p class="service-number">03</p>
+              <h3>Desain grafis</h3>
+              <p>
+                Membuat visual digital untuk poster, konten, dan kebutuhan
+                komunikasi lainnya.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section
+        class="contact section"
+        id="contact"
+        aria-labelledby="contact-title"
+      >
+        <div class="contact-copy reveal">
+          <p class="kicker">Kontak</p>
+          <h2 id="contact-title">
+            Punya ide yang ingin <span class="gradient-text">dibicarakan?</span>
           </h2>
-
           <p>
-            Membuat berbagai desain visual untuk kebutuhan digital seperti
-            poster, konten, dan project lainnya.
+            Isi formulir ini, lalu pesan Anda akan disiapkan untuk dikirim
+            melalui WhatsApp.
           </p>
-
-          <img src="image/graphicdes.png" alt="Contoh Graphic Design" />
-        </article>
-      </div>
-    </section>
-
-    <!-- ================= CONTACT ================= -->
-    <section id="contact">
-      <h1 class="header">
-        <span class="gradient-text">Contact</span>
-      </h1>
-
-      <form id="contactForm">
-        <div class="input-box">
-          <label for="name">Nama</label>
-          <input id="name" type="text" placeholder="Isi nama kamu" required />
         </div>
-
-        <div class="input-box">
-          <label for="phone">Nomor Telepon</label>
-          <input id="phone" type="tel" placeholder="Isi nomor kamu" required />
-        </div>
-
-        <div class="input-box">
-          <label for="purpose">Tujuan Menghubungi</label>
-          <textarea
-            id="purpose"
-            placeholder="Contoh: ingin membuat website..."
-            rows="5"
-            required
-          ></textarea>
-        </div>
-
-        <button type="submit" class="btn btn-submit">Kirim Pesan</button>
-      </form>
-    </section>
-
-    <!-- ================= FOOTER ================= -->
-    <footer>
-      <div class="col-left">
-        <div class="col-box">
-          <div class="footer-icon" aria-hidden="true">
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M12 21s7-6.1 7-12A7 7 0 1 0 5 9c0 5.9 7 12 7 12Z"
-                stroke="currentColor"
-                stroke-width="1.8"
-              />
-              <circle
-                cx="12"
-                cy="9"
-                r="2.5"
-                stroke="currentColor"
-                stroke-width="1.8"
-              />
-            </svg>
+        <form id="contactForm" class="contact-form reveal">
+          <div class="input-box">
+            <label for="name">Nama</label
+            ><input
+              id="name"
+              name="name"
+              type="text"
+              autocomplete="name"
+              placeholder="Nama Anda"
+              required
+            />
           </div>
-
-          <p>Indonesia, Kalimantan Barat, Pontianak</p>
-        </div>
-
-        <div class="col-box">
-          <div class="footer-icon" aria-hidden="true">
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                x="4"
-                y="4"
-                width="16"
-                height="16"
-                rx="5"
-                stroke="currentColor"
-                stroke-width="1.8"
-              />
-              <circle
-                cx="12"
-                cy="12"
-                r="4"
-                stroke="currentColor"
-                stroke-width="1.8"
-              />
-              <circle cx="17.2" cy="6.8" r="1" fill="currentColor" />
-            </svg>
+          <div class="input-box">
+            <label for="phone">Nomor telepon</label
+            ><input
+              id="phone"
+              name="phone"
+              type="tel"
+              autocomplete="tel"
+              placeholder="Nomor yang dapat dihubungi"
+              required
+            />
           </div>
-
-          <p>Instagram: [ddadavid_]</p>
-        </div>
-
-        <div class="col-box">
-          <div class="footer-icon" aria-hidden="true">
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                x="3"
-                y="5"
-                width="18"
-                height="14"
-                rx="2"
-                stroke="currentColor"
-                stroke-width="1.8"
-              />
-              <path d="M3 9h18" stroke="currentColor" stroke-width="1.8" />
-            </svg>
+          <div class="input-box">
+            <label for="purpose">Pesan</label
+            ><textarea
+              id="purpose"
+              name="purpose"
+              rows="5"
+              placeholder="Ceritakan kebutuhan atau ide Anda"
+              required
+            ></textarea>
           </div>
-
-          <p>Minecraft Server CrossPlay: [ egeria..arqonara.com:25526 ]</p>
-        </div>
-      </div>
-
-      <div class="col-right">
-        <h3>
-          <span class="gradient-text">About My Services</span>
-        </h3>
-
-        <p>
-          Saya dapat membantu anda dalam berbagai layanan yang berhubungan
-          dengan website, desain grafis, dan teknologi. Setiap project
-          dikerjakan dengan detail, desain modern, fungsional, dan efisien.
-        </p>
-
-        <div class="social-icons">
-          <a
-            href="https://www.instagram.com/ddadavid_?stkn=MXF2Mjg2YjluczE0bg=="
-            aria-label="Instagram"
-            >Instagram</a
-          >
-          <p>|</p>
-          <a
-            href="https://www.tiktok.com/@dadadavid123?_r=1&_t=ZS-9AAPqTeXbL6"
-            aria-label="TikTok"
-            >TikTok</a
-          >
-          <p>|</p>
-          <a href="#" aria-label="Twitter">Twitter</a>
-        </div>
+          <button type="submit" class="button button-primary">
+            Siapkan pesan WhatsApp
+          </button>
+          <p class="form-status" id="formStatus" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+    <footer class="footer">
+      <p>
+        <span class="gradient-text">dadadavid</span> · Pontianak, Kalimantan
+        Barat
+      </p>
+      <div>
+        <a href="https://www.instagram.com/ddadavid_?stkn=MXF2Mjg2YjluczE0bg=="
+          >Instagram</a
+        ><a href="https://www.tiktok.com/@dadadavid123?_r=1&_t=ZS-9AAPqTeXbL6"
+          >TikTok</a
+        >
       </div>
     </footer>
-
     <script src="script.js"></script>
   </body>
 </html>
